@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: d3e355e13860205449afc6846101cd25
+guid: ad87cdc8005f8484fb4ec7eeddbb0b98
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -2463781497245029270
+    second: metarig|metarigAction.001
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -23,14 +26,43 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: metarig|metarigAction.001
+      takeName: metarig|metarigAction.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -77,7 +109,82 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: ToasterRunAnim(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Plane.002
+      parentName: ToasterRunAnim(Clone)
+      position: {x: 0.012651329, y: 0.32424262, z: -0.23956428}
+      rotation: {x: -0.7071067, y: 0.00000022197246, z: -0.00000022197248, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: metarig
+      parentName: ToasterRunAnim(Clone)
+      position: {x: 0, y: -0.12608768, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: spine
+      parentName: metarig
+      position: {x: -1.1818161e-11, y: 0.00015518192, z: 0.0054786056}
+      rotation: {x: 0.7189788, y: -0.00000006659946, z: -0.000000114305145, w: 0.69503206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.001
+      parentName: spine
+      position: {x: -5.941725e-13, y: 0.001614312, z: -8.076313e-12}
+      rotation: {x: -0.01844406, y: 0.000000018228485, z: 0.0000000023612896, w: 0.9998299}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: pelvis.L
+      parentName: spine
+      position: {x: -0.0005345106, y: -0.00032917145, z: 0.00015054483}
+      rotation: {x: -0.45775175, y: 0.40710622, z: 0.57930213, w: 0.5377145}
+      scale: {x: 0.924288, y: 0.9242881, z: 0.9242882}
+    - name: pelvis.R
+      parentName: spine
+      position: {x: 0.0005345107, y: -0.00032917142, z: 0.00015054458}
+      rotation: {x: -0.45775196, y: -0.40710613, z: -0.5793021, w: 0.5377145}
+      scale: {x: 1.0000004, y: 0.9999998, z: 0.99999976}
+    - name: thigh.L
+      parentName: spine
+      position: {x: -0.0022820756, y: -0.001343259, z: 0.000108334134}
+      rotation: {x: 0.9988502, y: -0.009685523, z: 0.00031295093, w: 0.04695198}
+      scale: {x: 1.0000007, y: 1.0000135, z: 1.0000067}
+    - name: shin.L
+      parentName: thigh.L
+      position: {x: 2.7241184e-10, y: 0.0013321249, z: 2.7939676e-10}
+      rotation: {x: 0.112403676, y: -0.0009540658, z: -0.009645496, w: 0.9936153}
+      scale: {x: 0.99999994, y: 0.9999977, z: 1.0000029}
+    - name: foot.L
+      parentName: shin.L
+      position: {x: -1.11758706e-10, y: 0.0012284346, z: 2.7939677e-11}
+      rotation: {x: -0.3121297, y: 0.7502752, z: 0.4635097, w: 0.35329998}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: heel.02.L
+      parentName: foot.L
+      position: {x: 0.00024609827, y: -0.00009432532, z: 0.0005102688}
+      rotation: {x: -0.70403546, y: 0.62419474, z: -0.3158916, w: 0.12217838}
+      scale: {x: 1.0000012, y: 0.99999666, z: 1.000003}
+    - name: thigh.R
+      parentName: spine
+      position: {x: 0.0022820754, y: -0.0013432596, z: 0.00010833266}
+      rotation: {x: 0.9988502, y: 0.009685521, z: -0.00031309808, w: 0.04695198}
+      scale: {x: 1.0000013, y: 1.0000169, z: 1.0000026}
+    - name: shin.R
+      parentName: thigh.R
+      position: {x: 8.381903e-11, y: 0.0013321252, z: 2.0372681e-10}
+      rotation: {x: 0.11240371, y: 0.0009539712, z: 0.009645489, w: 0.9936153}
+      scale: {x: 1, y: 0.9999948, z: 1.000006}
+    - name: foot.R
+      parentName: shin.R
+      position: {x: -3.259629e-11, y: 0.001228435, z: 4.842877e-10}
+      rotation: {x: -0.31213048, y: -0.75027484, z: -0.4635094, w: 0.35330057}
+      scale: {x: 0.99999994, y: 0.9999993, z: 1.0000008}
+    - name: heel.02.R
+      parentName: foot.R
+      position: {x: -0.00024609856, y: -0.00009432543, z: 0.000510269}
+      rotation: {x: -0.70408124, y: -0.6243134, z: 0.3156571, w: 0.12191388}
+      scale: {x: 1.000002, y: 0.99999624, z: 1.0000025}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -88,13 +195,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
