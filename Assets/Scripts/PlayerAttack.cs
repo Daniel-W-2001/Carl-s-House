@@ -11,9 +11,9 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(CanAttack)
+            if (CanAttack)
             {
                 BatAttack();
             }
@@ -33,6 +33,7 @@ public class PlayerAttack : MonoBehaviour
         StartCoroutine(ResetAttackBool());
         yield return new WaitForSeconds(AttackCooldown);
         CanAttack = true;
+        IsAttacking = false;
     }
 
     IEnumerator ResetAttackBool()
