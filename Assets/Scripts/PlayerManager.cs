@@ -27,4 +27,14 @@ public class PlayerManager : MonoBehaviour
     {
         playerCurrentHealth = playerMaxHealth;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Toast")
+        {
+            playerCurrentHealth += 1;
+            Destroy(other.gameObject);
+        }
+    }
+
+
 }

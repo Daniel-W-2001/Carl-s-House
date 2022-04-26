@@ -76,6 +76,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 41f0aa8a0c42e5140a24072e05fdd348, type: 2}
     - target: {fileID: 5866666021909216657, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
@@ -84,6 +92,11 @@ PrefabInstance:
 --- !u!1 &6796127190508754827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
+  m_PrefabInstance: {fileID: 5949774618321021658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &286908574220179275 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
   m_PrefabInstance: {fileID: 5949774618321021658}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &1086892009
@@ -113,8 +126,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.136017, y: 5.424802, z: 3.5200422}
-  m_Center: {x: -0.22626111, y: 4.212394, z: 0.024449842}
+  m_Size: {x: 6.440254, y: 5.424802, z: 4.7569675}
+  m_Center: {x: -0.2684115, y: 4.212394, z: -0.14805622}
+--- !u!114 &-5113370582497017772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796127190508754827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8c9652bb68b1c4e9cf638de8cb5074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vaseAnim: {fileID: 286908574220179275}
+  AnimIsPlaying: 0
+  Vase: {fileID: 6796127190508754827}
 --- !u!114 &1086892011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,10 +173,10 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6796127190508754827}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -157,6 +185,25 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 10
+  m_BaseOffset: -1
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6779040047475192433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796127190508754827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e492d151ea1fe41956e917b9159ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyCurrentHealth: 0
+  MaxHealth: 2
+  PieceOfToast: {fileID: 0}
+  IsToaster: 0
+  Toaster: {fileID: 0}
+  ToasterPos: {fileID: 0}
+  BatDamage: 0
