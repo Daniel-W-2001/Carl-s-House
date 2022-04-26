@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    public int damageToGive;
+
     public NavMeshAgent Agent;
 
     public Transform player;
@@ -40,6 +43,11 @@ public class EnemyAI : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        
+        if(collision.gameObject.name == "FirstPersonController")
+        {
+            Debug.Log("Collided with player");
+            collision.gameObject.GetComponent<PlayerManager>().HurtPlayer(damageToGive);
+
+        }
     }
 }

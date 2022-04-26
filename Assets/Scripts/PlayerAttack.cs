@@ -8,7 +8,6 @@ public class PlayerAttack : MonoBehaviour
     public bool CanAttack = true;
     public float AttackCooldown = 1.0f;
     public bool IsAttacking = false;
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

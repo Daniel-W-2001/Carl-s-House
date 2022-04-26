@@ -5,33 +5,23 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     //floats for health and damage for enemies
-    public int EnemyHealth;
+    public int EnemyCurrentHealth;
     public int MaxHealth;
-    public float damage;
 
     public int BatDamage;
     void Start()
     {
-        EnemyHealth = MaxHealth;
+        EnemyCurrentHealth = MaxHealth;
     }
 
-    public void HurtEnemy (int damageToGive)
+    public void HurtEnemy(int damageToGive)
     {
-        //playerCurrentHealth -= damageToGive;
+        EnemyCurrentHealth -= damageToGive;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void setMaxHealth()
+    {
+        EnemyCurrentHealth = MaxHealth;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,9 +31,9 @@ public class EnemyManager : MonoBehaviour
     }
     void TakeDamage()
     {
-        EnemyHealth -= BatDamage;
+        EnemyCurrentHealth -= BatDamage;
 
-        if (EnemyHealth <= 0) Invoke(nameof(destroyEnemy), 1f);
+        if (EnemyCurrentHealth <= 0) Invoke(nameof(destroyEnemy), 1f);
     }
     private void destroyEnemy()
     {

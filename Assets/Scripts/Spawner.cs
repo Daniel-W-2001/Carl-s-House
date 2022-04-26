@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Spawner : MonoBehaviour
 {
+    public int DamageWhileAirborne;
+    public bool animIsPlaying;
 
     public Transform Spawnpoint;
     public float timeBetweenSpawn;
@@ -12,7 +14,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] EnemyArray;
     void Start()
     {
-        
+        animIsPlaying = false;
     }
     void FixedUpdate()
     {
@@ -30,7 +32,6 @@ public class Spawner : MonoBehaviour
 
         GameObject obj = (GameObject)Instantiate(EnemyArray[Enemyspawn], start, transform.rotation);
 
-        obj.GetComponent<NavMeshAgent>().velocity = Vector3.up * 50;
            
     }
 }

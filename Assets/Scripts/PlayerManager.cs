@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     }
     void Update()
     {
-        if(playerCurrentHealth < 0)
+        if(playerCurrentHealth <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -21,5 +21,10 @@ public class PlayerManager : MonoBehaviour
     public void HurtPlayer(int damageToGive)
     {
         playerCurrentHealth -= damageToGive;
+    }
+
+    public void SetMaxHealth()
+    {
+        playerCurrentHealth = playerMaxHealth;
     }
 }

@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 151092362}
   player: {fileID: 2013441350}
   whatIsGround:
@@ -425,9 +426,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1688617927700330159, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
       propertyPath: m_Name
       value: FlowerVaseV1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 0121744f5259a4047bbc4faa46d3de2f, type: 3}
       propertyPath: m_Controller
@@ -631,8 +640,10 @@ GameObject:
   - component: {fileID: 570481843}
   - component: {fileID: 570481842}
   - component: {fileID: 570481841}
+  - component: {fileID: 570481846}
+  - component: {fileID: 570481847}
   m_Layer: 0
-  m_Name: d
+  m_Name: TestCube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,8 +676,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.1603527}
-  m_Center: {x: 0, y: 0, z: 0.58017635}
+  m_Size: {x: 4.280756, y: 1, z: 5.4208393}
+  m_Center: {x: 0.19246483, y: 0, z: -0.21353626}
 --- !u!23 &570481843
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -730,6 +741,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &570481846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570481840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageToGive: 1
+  Agent: {fileID: 0}
+  player: {fileID: 2013441350}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 512
+  sightRange: 0
+  playerInSightRange: 0
+--- !u!114 &570481847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570481840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e492d151ea1fe41956e917b9159ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyCurrentHealth: 0
+  MaxHealth: 2
+  BatDamage: 1
 --- !u!1001 &600852494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,9 +1342,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5117700066308340382, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
       propertyPath: m_Name
       value: trashV4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
@@ -1377,6 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 1047517200}
   player: {fileID: 2013441350}
   whatIsGround:
@@ -1409,6 +1467,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1047517203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047517198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1130436135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87354b031096c414d9c53798e693b9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageWhileAirborne: 0
+  animIsPlaying: 0
   Spawnpoint: {fileID: 1130436137}
   timeBetweenSpawn: 5
   spawnTime: 4
@@ -1488,8 +1561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079e272222b1fab4baf42bcf1ebe5458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   bp: {fileID: 932119940}
-  knockback: 30
+  knockback: 50
   knockbackUp: 20
 --- !u!1 &1225873180
 GameObject:
@@ -1830,6 +1904,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5f0c2cb6220f544c9d35a3b741cdfda, type: 3}
+--- !u!1 &1278578517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 1794862595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1278578518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278578517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509837b9d3269c347894bd64653e85a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxHealth: 5
+  playerCurrentHealth: 0
 --- !u!1 &1558943191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c76c860e89cb43429655b26efae0b24, type: 3}
@@ -2200,8 +2293,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1834152222
 BoxCollider:
@@ -2295,8 +2388,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1885073697
 BoxCollider:

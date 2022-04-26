@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionDetection : MonoBehaviour
 {
+    public int damageToGive;
+
     public PlayerAttack bp;
     public float knockback;
     public float knockbackUp;
@@ -13,6 +15,7 @@ public class CollisionDetection : MonoBehaviour
         {
          
             Debug.Log("Has hit the enemy");
+            other.GetComponent<EnemyManager>().HurtEnemy(damageToGive);
             other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * knockback, ForceMode.Impulse);
             //other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * knockbackUp, ForceMode.Impulse);
 
