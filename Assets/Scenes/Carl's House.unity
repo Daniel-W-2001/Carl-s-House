@@ -908,6 +908,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1086892011, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2018375005}
+    - target: {fileID: 1086892012, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086892012, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+      propertyPath: m_BaseOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 520398172249304367, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 14.920315
@@ -998,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132601972438961457, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.53
+      value: 2.31
       objectReference: {fileID: 0}
     - target: {fileID: 6132601972438961457, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1047,6 +1059,10 @@ PrefabInstance:
     - target: {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_Name
       value: FlowerVaseV1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6920697840462856102, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1338,15 +1354,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87354b031096c414d9c53798e693b9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageWhileAirborne: 0
-  animIsPlaying: 0
+  DamageWhileAirborne: 2
+  AnimIsPlaying: 0
+  vaseAnim: {fileID: 286908574220179275, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
   Spawnpoint: {fileID: 1563850344}
-  timeBetweenSpawn: 10
+  timeBetweenSpawn: 5
   spawnTime: 0
   EnemyArray:
   - {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
-  - {fileID: 3969745777630003391, guid: 8ca2b477b6fb55d45a97b285eae661b2, type: 3}
-  - {fileID: 4114548406188365765, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
 --- !u!4 &1563850344
 Transform:
   m_ObjectHideFlags: 0
@@ -1355,7 +1370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563850342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.272, y: 1, z: 15.69}
+  m_LocalPosition: {x: 1.43, y: 3, z: 1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1603,6 +1618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc76affdea6466c4981e1fc828f7170c, type: 3}
+--- !u!4 &2018375005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6132601972438961457, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+  m_PrefabInstance: {fileID: 1067574152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2020279383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc76affdea6466c4981e1fc828f7170c, type: 3}
@@ -1793,8 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageToGive: 0
   bp: {fileID: 669338884}
-  knockback: 20
-  knockbackUp: 20
+  knockback: 50
 --- !u!65 &2101368112
 BoxCollider:
   m_ObjectHideFlags: 0

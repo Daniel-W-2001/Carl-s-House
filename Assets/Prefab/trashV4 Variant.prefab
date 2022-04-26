@@ -109,8 +109,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.7369738, y: 3.4133701, z: 3.7917988}
-  m_Center: {x: -0.10003694, y: 3.2066896, z: 0.08320579}
+  m_Size: {x: 4.8072276, y: 3.4133701, z: 4.238628}
+  m_Center: {x: -0.044285573, y: 3.2066896, z: -0.019024547}
 --- !u!114 &585884315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 585884316}
   player: {fileID: 0}
   whatIsGround:
