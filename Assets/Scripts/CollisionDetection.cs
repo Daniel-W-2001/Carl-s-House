@@ -13,8 +13,8 @@ public class CollisionDetection : MonoBehaviour
         {
          
             Debug.Log("Has hit the enemy");
-            other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.back * knockback, ForceMode.Impulse);
-            other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * knockbackUp, ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * knockback, ForceMode.Impulse);
+            //other.gameObject.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * knockbackUp, ForceMode.Impulse);
 
             //AddRelativeForce(Vector3.back * knockback, ForceMode.Impulse);
 

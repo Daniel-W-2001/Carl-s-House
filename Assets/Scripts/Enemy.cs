@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     public float Health;
     public float damage;
 
+    //misc items
+    public GameObject Toast;
+    public GameObject Explosive;
     //will tell if the enemy is airborne or not. This will also determine damage
     public bool IsAirborne;
     public bool IsGrounded;
@@ -17,6 +20,12 @@ public class Enemy : MonoBehaviour
     public bool IsTrashbag;
     public bool IsVase;
 
-    //Scaleable enemy script WIP
-   
+
+    void Update()
+    {
+        
+    }
+
+
 }
+ 
