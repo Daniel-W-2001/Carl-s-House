@@ -8,6 +8,7 @@ public class MovementVase : MonoBehaviour
     public Animator vaseAnim;
     public bool AnimIsPlaying;
     public GameObject Vase;
+    public NavMeshAgent Agent;
 
     void Start()
     {
@@ -26,5 +27,15 @@ public class MovementVase : MonoBehaviour
         vaseAnim.applyRootMotion = true;
         vaseAnim.SetBool("VaseJump", true);
         Vase.GetComponent<NavMeshAgent>().enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Bat")
+        {
+            Destroy(vaseAnim);
+            Destroy(Agent);
+        }
+
     }
 }

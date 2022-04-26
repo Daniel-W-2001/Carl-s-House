@@ -126,8 +126,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.440254, y: 5.424802, z: 4.7569675}
-  m_Center: {x: -0.2684115, y: 4.212394, z: -0.14805622}
+  m_Size: {x: 6.4402533, y: 5.9799743, z: 4.7569675}
+  m_Center: {x: -0.2684115, y: 3.9348063, z: -0.14805622}
 --- !u!114 &-5113370582497017772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +143,7 @@ MonoBehaviour:
   vaseAnim: {fileID: 286908574220179275}
   AnimIsPlaying: 0
   Vase: {fileID: 6796127190508754827}
+  Agent: {fileID: 1086892012}
 --- !u!114 &1086892011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: -1
+  m_BaseOffset: -0.8
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
 --- !u!114 &6779040047475192433
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyCurrentHealth: 0
-  MaxHealth: 2
+  MaxHealth: 1
   PieceOfToast: {fileID: 0}
   IsToaster: 0
   Toaster: {fileID: 0}

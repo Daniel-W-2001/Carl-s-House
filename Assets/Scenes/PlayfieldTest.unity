@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toaster Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4114548406188365765, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
 --- !u!1001 &465483000
@@ -764,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &570481841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1286,6 +1290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trashV4 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3969745777630003391, guid: 8ca2b477b6fb55d45a97b285eae661b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4349507935019080197, guid: 8ca2b477b6fb55d45a97b285eae661b2, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1517,6 +1525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5113370582497017772, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1086892009, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
       propertyPath: m_Constraints
       value: 80
@@ -1902,9 +1914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87354b031096c414d9c53798e693b9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageWhileAirborne: 0
-  AnimIsPlaying: 0
-  vaseAnim: {fileID: 0}
   Spawnpoint: {fileID: 1130436137}
   timeBetweenSpawn: 5
   spawnTime: 4
@@ -2636,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 13.8
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2644,7 +2653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -46.5
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
