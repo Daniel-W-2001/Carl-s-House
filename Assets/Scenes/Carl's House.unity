@@ -868,6 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 482450730}
   player: {fileID: 692541462}
   whatIsGround:
@@ -1759,6 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 1422662660}
   player: {fileID: 692541462}
   whatIsGround:
@@ -1798,6 +1800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87354b031096c414d9c53798e693b9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageWhileAirborne: 0
+  animIsPlaying: 0
   Spawnpoint: {fileID: 1563850344}
   timeBetweenSpawn: 10
   spawnTime: 0
@@ -2138,6 +2142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   Agent: {fileID: 2049720025}
   player: {fileID: 692541462}
   whatIsGround:
@@ -2248,6 +2253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079e272222b1fab4baf42bcf1ebe5458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageToGive: 0
   bp: {fileID: 669338884}
   knockback: 20
   knockbackUp: 20
