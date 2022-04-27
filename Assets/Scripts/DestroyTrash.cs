@@ -5,13 +5,13 @@ using UnityEngine;
 public class DestroyTrash : MonoBehaviour
 {
     public bool hasDamagedPlayer;
+
     public int damageToGive;
 
     public GameObject trash;
     // Start is called before the first frame update
     void Start()
     {
-        hasDamagedPlayer = false;
         StartCoroutine(Destroyobjects());
     }
     void OnCollisionEnter(Collision collision)
@@ -23,7 +23,7 @@ public class DestroyTrash : MonoBehaviour
         } else
         {
             hasDamagedPlayer = true;
-        }    
+        }   
     }
             IEnumerator Destroyobjects()
     {

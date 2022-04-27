@@ -125,8 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0a3f2fb4b78844b8b996e59d8b5065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Manager: {fileID: 8131790632835103110, guid: 8ca2b477b6fb55d45a97b285eae661b2, type: 3}
   hasDamagedPlayer: 0
   damageToGive: 1
-  BatDamage: 1
   trash: {fileID: 7100214926616864748}
