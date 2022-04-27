@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    public MovementVase Vasebool;
 
     public int damageToGive;
 
@@ -48,6 +49,13 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerManager>().HurtPlayer(damageToGive);
 
+        } else if (collision.gameObject.name == "FirstPersonController" && Vasebool.AnimIsPlaying == true)
+        {
+            damageToGive = 2;
+        }
+        else
+        {
+            damageToGive = 1;
         }
     }
 }

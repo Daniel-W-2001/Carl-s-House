@@ -22,7 +22,7 @@ public class MovementVase : MonoBehaviour
         StartCoroutine(PlayWalk());
     }
     IEnumerator PlayWalk()
-    {
+    {   
         yield return new WaitForSeconds(2.3f);
         vaseAnim.applyRootMotion = true;
         vaseAnim.SetBool("VaseJump", true);

@@ -142,6 +142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyCurrentHealth: 0
   MaxHealth: 1
+  IsTrash: 0
+  trashobjects: []
+  Trashpos: {fileID: 0}
   PieceOfToast: {fileID: 1343196780}
   IsToaster: 1
   Toaster: {fileID: 47418015}
@@ -291,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vasebool: {fileID: 0}
   damageToGive: 0
   Agent: {fileID: 151092362}
   player: {fileID: 2013441350}
@@ -768,7 +772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &570481841
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -873,6 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vasebool: {fileID: 0}
   damageToGive: 1
   Agent: {fileID: 0}
   player: {fileID: 2013441350}
@@ -898,6 +903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyCurrentHealth: 0
   MaxHealth: 2
+  IsTrash: 0
+  trashobjects: []
+  Trashpos: {fileID: 0}
   PieceOfToast: {fileID: 0}
   IsToaster: 0
   Toaster: {fileID: 0}
@@ -1817,6 +1825,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyCurrentHealth: 0
   MaxHealth: 3
+  IsTrash: 0
+  trashobjects: []
+  Trashpos: {fileID: 0}
   PieceOfToast: {fileID: 0}
   IsToaster: 0
   Toaster: {fileID: 0}
@@ -1839,6 +1850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vasebool: {fileID: 0}
   damageToGive: 0
   Agent: {fileID: 1047517200}
   player: {fileID: 2013441350}

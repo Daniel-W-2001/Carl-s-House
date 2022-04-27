@@ -9,10 +9,17 @@ public class EnemyManager : MonoBehaviour
     public int EnemyCurrentHealth;
     public int MaxHealth;
 
+    //trash npc variables
+    public GameObject trashObject;
+    public bool IsTrash;
+    public Transform Trashpos;
+    //toaster npc variables
     public GameObject PieceOfToast;
     public bool IsToaster;
     public GameObject Toaster;
     public Transform ToasterPos;
+
+
     public int BatDamage;
     void Start()
     {
@@ -40,16 +47,23 @@ public class EnemyManager : MonoBehaviour
         if (EnemyCurrentHealth <= 0) Invoke(nameof(destroyEnemy), 1f);
 
         Vector3 start = ToasterPos.position;
+        Vector3 trash = Trashpos.position;
+
         if (EnemyCurrentHealth <= 0 && IsToaster == true)
         {
+
             Instantiate(PieceOfToast, start, transform.rotation);
+
+        }
+        else if (EnemyCurrentHealth <= 0 && IsTrash == true)
+        {
+            Instantiate(trashObject, trash, transform.rotation);
         }
     }
     private void destroyEnemy()
     {
         Destroy(gameObject);
     }
-
 
 }
  
