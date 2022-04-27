@@ -10,20 +10,32 @@ public class EnemyManager : MonoBehaviour
     public int MaxHealth;
 
     //trash npc variables
-    public GameObject trashObject;
     public bool IsTrash;
-    public Transform Trashpos;
+
+    public GameObject pooledObject;
+
+    public int pooledAmount;
+
+    List<GameObject> pooledObjects;
     //toaster npc variables
     public GameObject PieceOfToast;
     public bool IsToaster;
-    public GameObject Toaster;
-    public Transform ToasterPos;
+
+    //Npc position
+    public Transform NPCPos;
 
 
     public int BatDamage;
     void Start()
     {
-        EnemyCurrentHealth = MaxHealth;
+        pooledObjects = new List<GameObject>();
+        for (int i = 0; i < pooledAmount; i++)
+        {
+            GameObject obj = (GameObject)Instantiate(pooledObject);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+            EnemyCurrentHealth = MaxHealth;
     }
     public void HurtEnemy(int damageToGive)
     {
@@ -34,20 +46,19 @@ public class EnemyManager : MonoBehaviour
         EnemyCurrentHealth = MaxHealth;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Bat")
 
             TakeDamage();
     }
-    void TakeDamage()
+   public void TakeDamage()
     {
         EnemyCurrentHealth -= BatDamage;
 
         if (EnemyCurrentHealth <= 0) Invoke(nameof(destroyEnemy), 1f);
 
-        Vector3 start = ToasterPos.position;
-        Vector3 trash = Trashpos.position;
+        Vector3 start = NPCPos.position;
 
         if (EnemyCurrentHealth <= 0 && IsToaster == true)
         {
@@ -55,11 +66,14 @@ public class EnemyManager : MonoBehaviour
             Instantiate(PieceOfToast, start, transform.rotation);
 
         }
-        else if (EnemyCurrentHealth <= 0 && IsTrash == true)
+        if (EnemyCurrentHealth <= 0 && IsTrash == true)
         {
-            Instantiate(trashObject, trash, transform.rotation);
+            for (int i = 0; i < pooledObjects.Count; i++)
+            {
+                GameObject obj = (GameObject)Instantiate(pooledObject, start, transform.rotation);
+            }
         }
-    }
+        }
     private void destroyEnemy()
     {
         Destroy(gameObject);

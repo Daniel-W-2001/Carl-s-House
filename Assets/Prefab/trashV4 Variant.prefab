@@ -82,6 +82,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
   m_PrefabInstance: {fileID: 4311694241156005358}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4349507935019080197 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d580420272154349b8a8633e16b0d39, type: 3}
+  m_PrefabInstance: {fileID: 4311694241156005358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &585884314
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Vasebool: {fileID: 0}
   damageToGive: 0
   Agent: {fileID: 585884316}
   player: {fileID: 0}
@@ -156,3 +162,24 @@ NavMeshAgent:
   m_BaseOffset: -0.5
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8131790632835103110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969745777630003391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e492d151ea1fe41956e917b9159ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyCurrentHealth: 0
+  MaxHealth: 1
+  IsTrash: 1
+  pooledObject: {fileID: 7100214926616864748, guid: 5093a9328afe2664599e5485e0294f4b, type: 3}
+  pooledAmount: 50
+  PieceOfToast: {fileID: 0}
+  IsToaster: 0
+  NPCPos: {fileID: 4349507935019080197}
+  BatDamage: 1
