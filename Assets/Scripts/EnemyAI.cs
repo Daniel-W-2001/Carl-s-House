@@ -49,7 +49,7 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerManager>().HurtPlayer(damageToGive);
 
-        } else if (collision.gameObject.name == "FirstPersonController" && Vasebool.AnimIsPlaying == true)
+        } else if (collision.gameObject.name == "FirstPersonController" && Vasebool.AnimIsPlaying == false)
         {
             damageToGive = 2;
         }
