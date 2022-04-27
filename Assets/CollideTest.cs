@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CollideTest : MonoBehaviour
 {
-    private void OnCollisionEnter(Collider other)
+    private void OnParticleCollision(GameObject other)
     {
-        if (other.tag == "Particle")
+        if(other.gameObject.name == "FirstPersonController")
         {
-            Debug.Log("water found");
+            Debug.Log("Collide");
         }
+        
     }
 }
