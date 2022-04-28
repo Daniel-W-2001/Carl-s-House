@@ -64,6 +64,7 @@ public class EnemyManager : MonoBehaviour
         {
 
             Instantiate(PieceOfToast, start, transform.rotation);
+            IsToaster = false;
 
         }
         if (EnemyCurrentHealth <= 0 && IsTrash == true)

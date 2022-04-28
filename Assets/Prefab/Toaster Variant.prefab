@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.479881
       objectReference: {fileID: 0}
@@ -75,6 +87,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
   m_PrefabInstance: {fileID: 3880033770346965652}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &7255918582512244485 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: ad87cdc8005f8484fb4ec7eeddbb0b98, type: 3}
+  m_PrefabInstance: {fileID: 3880033770346965652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &1257306288
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -89,7 +106,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &1257306289
 BoxCollider:
@@ -102,8 +119,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2466869, y: 1.0939695, z: 1.3406181}
-  m_Center: {x: -0.066996574, y: 0.6365251, z: 0.040784836}
+  m_Size: {x: 0.93153286, y: 0.9037169, z: 0.8846264}
+  m_Center: {x: 0.09058046, y: 0.5413988, z: 0.05529785}
 --- !u!114 &-7179433167425165302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +188,19 @@ MonoBehaviour:
     m_Bits: 512
   sightRange: 50
   playerInSightRange: 0
+--- !u!114 &7104622230300960616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114548406188365765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc977c0d3763230479d24d854b89d9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToasterAnim: {fileID: 7255918582512244485}
+  AnimIsPlaying: 0
+  Toaster: {fileID: 4114548406188365765}
+  Agent: {fileID: 1257306283}
