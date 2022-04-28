@@ -216,8 +216,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.4402533, y: 5.979972, z: 2.8771074}
-  m_Center: {x: -0.2684115, y: 3.934805, z: 0.79186714}
+  m_Size: {x: 2.278454, y: 5.979974, z: 2.156515}
+  m_Center: {x: -0.025543109, y: 3.9348059, z: 0.4315701}
 --- !u!114 &-5113370582497017772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vaseAnim: {fileID: 286908574220179275}
-  AnimIsPlaying: 0
   Vase: {fileID: 6796127190508754827}
   Agent: {fileID: 1086892012}
 --- !u!114 &1086892011
@@ -246,10 +245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vasebool: {fileID: 0}
-  damageToGive: 0
+  Enemy: {fileID: 4277682507210242717}
+  damageToGive: 1
   Agent: {fileID: 1086892012}
-  player: {fileID: 0}
+  player: {fileID: 2205139516577436648, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -280,6 +279,19 @@ NavMeshAgent:
   m_BaseOffset: -0.8
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4277682507210242717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796127190508754827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbdd49e67125df439259a213f82a6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsAirborne: 1
 --- !u!114 &6779040047475192433
 MonoBehaviour:
   m_ObjectHideFlags: 0

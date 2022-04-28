@@ -4818,3 +4818,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c30db7cf8158cf4abe45518265eae73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 2205139516577436654, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
+  IsColliding: 0

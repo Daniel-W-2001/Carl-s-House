@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public MovementVase Vasebool;
+    public AirborneEnemy Enemy;
 
     public int damageToGive;
 
@@ -21,8 +21,25 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     private void Awake()
     {
+
         player = GameObject.Find("FirstPersonController").transform;
         Agent = GetComponent<NavMeshAgent>();
+    }
+    public void Start()
+    {
+        Enemy.IsAirborne = true; 
+    }
+    void FixedUpdate()
+    {
+        if (Enemy.IsAirborne == true)
+        {
+            damageToGive = 2;
+        }
+
+        else
+        {
+            damageToGive = 1;
+        }
     }
 
     private void Update()
@@ -49,13 +66,6 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerManager>().HurtPlayer(damageToGive);
 
-        } else if (collision.gameObject.name == "FirstPersonController" && Vasebool.AnimIsPlaying == false)
-        {
-            damageToGive = 2;
-        }
-        else
-        {
-            damageToGive = 1;
-        }
+        } 
     }
 }

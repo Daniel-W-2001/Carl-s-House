@@ -5,13 +5,16 @@ using UnityEngine.Animations;
 using UnityEngine.AI;
 public class MovementToaster : MonoBehaviour
 {
+    
+
     public Animator ToasterAnim;
-    public bool AnimIsPlaying;
     public GameObject Toaster;
     public NavMeshAgent Agent;
 
     void Start()
     {
+        
+
         ToasterAnim = GetComponent<Animator>();
         Toaster.GetComponent<NavMeshAgent>().enabled = false;
 
@@ -24,6 +27,8 @@ public class MovementToaster : MonoBehaviour
     IEnumerator PlayToasterWalk()
     {
         yield return new WaitForSeconds(2.3f);
+
+
         ToasterAnim.applyRootMotion = true;
         ToasterAnim.SetBool("ToasterJump", true);
         Toaster.GetComponent<NavMeshAgent>().enabled = true;

@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1685330588522041864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7039663379541865986}
+  m_Layer: 0
+  m_Name: Trash spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7039663379541865986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685330588522041864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6491814, y: 6.6810246, z: 2.6380901}
+  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1.1111112}
+  m_Children: []
+  m_Father: {fileID: 4349507935019080197}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4311694241156005358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,10 +163,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcac822c85a8c447b439586bce86446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vasebool: {fileID: 0}
-  damageToGive: 0
+  Enemy: {fileID: 1218477167882711138}
+  damageToGive: 1
   Agent: {fileID: 585884316}
-  player: {fileID: 0}
+  player: {fileID: 2205139516577436648, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
@@ -159,7 +189,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -167,6 +197,19 @@ NavMeshAgent:
   m_BaseOffset: -0.5
   m_WalkableMask: 8
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1218477167882711138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3969745777630003391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbdd49e67125df439259a213f82a6ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsAirborne: 0
 --- !u!114 &1914454788158870183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrashAnim: {fileID: 7691201177281871999}
-  AnimIsPlaying: 0
   Trash: {fileID: 3969745777630003391}
   Agent: {fileID: 585884316}
 --- !u!114 &8131790632835103110
@@ -199,8 +241,8 @@ MonoBehaviour:
   MaxHealth: 1
   IsTrash: 1
   pooledObject: {fileID: 7100214926616864748, guid: 5093a9328afe2664599e5485e0294f4b, type: 3}
-  pooledAmount: 50
+  pooledAmount: 30
   PieceOfToast: {fileID: 0}
   IsToaster: 0
-  NPCPos: {fileID: 4349507935019080197}
+  NPCPos: {fileID: 7039663379541865986}
   BatDamage: 1

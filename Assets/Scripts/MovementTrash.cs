@@ -7,12 +7,13 @@ using UnityEngine.AI;
 public class MovementTrash : MonoBehaviour
 {
     public Animator TrashAnim;
-    public bool AnimIsPlaying;
     public GameObject Trash;
     public NavMeshAgent Agent;
 
     void Start()
     {
+       
+
         TrashAnim = GetComponent<Animator>();
         Trash.GetComponent<NavMeshAgent>().enabled = false;
 
@@ -25,6 +26,9 @@ public class MovementTrash : MonoBehaviour
     IEnumerator PlayTrashWalk()
     {
         yield return new WaitForSeconds(2.3f);
+
+       
+
         TrashAnim.applyRootMotion = true;
         TrashAnim.SetBool("TrashJump", true);
         Trash.GetComponent<NavMeshAgent>().enabled = true;
