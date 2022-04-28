@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4332135468102491056}
   - component: {fileID: 4332135468102491059}
   - component: {fileID: 4332135468102491062}
+  - component: {fileID: -9179373446888245402}
   m_Layer: 0
   m_Name: Water
   m_TagString: Particle
@@ -4820,3 +4821,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2205139516577436654, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
   IsColliding: 0
+--- !u!114 &-9179373446888245402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4332135468102491058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb7ff37878b4b841b0d9a65efe60e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 4332135468102491058}
+  HasCollided: 0
+  electrify: 0

@@ -27,16 +27,15 @@ public class PlayerManager : MonoBehaviour
     {
         playerCurrentHealth = playerMaxHealth;
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision collision)
     {
-        if(other.tag == "Toast")
+        if (collision.gameObject.tag == "Toast")
         {
             playerCurrentHealth += 1;
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
-    }
 
-   
+    }
 
 
 }
