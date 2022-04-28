@@ -20,10 +20,8 @@ public class DestroyTrash : MonoBehaviour
         {
             Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerManager>().HurtPlayer(damageToGive);
-        } else
-        {
             hasDamagedPlayer = true;
-        }   
+        }
     }
             IEnumerator Destroyobjects()
     {

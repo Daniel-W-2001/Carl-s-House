@@ -71,6 +71,7 @@ public class EnemyManager : MonoBehaviour
             for (int i = 0; i < pooledObjects.Count; i++)
             {
                 GameObject obj = (GameObject)Instantiate(pooledObject, start, transform.rotation);
+                IsTrash = false;
             }
         }
         }

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7100214926616864759}
   - component: {fileID: 4957350557950701586}
   - component: {fileID: 3460138708121460514}
+  - component: {fileID: -351681013522103343}
   m_Layer: 0
   m_Name: trash
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +129,16 @@ MonoBehaviour:
   hasDamagedPlayer: 0
   damageToGive: 1
   trash: {fileID: 7100214926616864748}
+--- !u!114 &-351681013522103343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7100214926616864748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7cde5dfd9a6e745887b5a4ffab85cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasDamagedEnemy: 0
