@@ -3810,8 +3810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Spawnpoint: {fileID: 1898283068}
-  timeBetweenSpawn: 4
-  spawnTime: 10
+  timeBetweenSpawn: 2
+  spawnTime: 12
   EnemyArray:
   - {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
   - {fileID: 4114548406188365765, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
