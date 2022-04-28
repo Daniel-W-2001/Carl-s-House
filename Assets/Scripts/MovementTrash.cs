@@ -20,13 +20,13 @@ public class MovementTrash : MonoBehaviour
 
     void Update()
     {
-        StartCoroutine(PlayToasterWalk());
+        StartCoroutine(PlayTrashWalk());
     }
-    IEnumerator PlayToasterWalk()
+    IEnumerator PlayTrashWalk()
     {
         yield return new WaitForSeconds(2.3f);
         TrashAnim.applyRootMotion = true;
-        TrashAnim.SetBool("ToasterJump", true);
+        TrashAnim.SetBool("TrashJump", true);
         Trash.GetComponent<NavMeshAgent>().enabled = true;
     }
 
