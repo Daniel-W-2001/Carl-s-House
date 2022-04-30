@@ -7,10 +7,13 @@ public class ToasterWaterCollision : MonoBehaviour
     public GameObject water;
     public bool HasCollided;
 
+    public GameObject ElectricityWater;
+
     public bool electrify;
 
     void Start()
     {
+        ElectricityWater.SetActive(false);
         HasCollided = false;
     }
     void FixedUpdate()
@@ -29,7 +32,8 @@ public class ToasterWaterCollision : MonoBehaviour
         }
         if (electrify == true)
         {
-             water.AddComponent<WaterDamage>();
+            ElectricityWater.SetActive(true);
+            water.AddComponent<WaterDamage>();
             electrify = false;
            
         }
