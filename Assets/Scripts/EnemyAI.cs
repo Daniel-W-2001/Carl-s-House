@@ -27,6 +27,10 @@ public class EnemyAI : MonoBehaviour
     }
     public void Start()
     {
+        if (Agent == null)
+        {
+            return;
+        }
         Enemy.IsAirborne = true; 
     }
     void FixedUpdate()
@@ -44,12 +48,18 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
+        if (Agent == null)
+        {
+            return;
+        }
+
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
 
         if (playerInSightRange) ChasePlayer();
     }
     private void ChasePlayer()
     {
+
         Agent.SetDestination(player.position);
 
         transform.LookAt(player);

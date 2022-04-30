@@ -13,15 +13,25 @@ public class MovementToaster : MonoBehaviour
 
     void Start()
     {
-        
+        if (ToasterAnim == null)
+        {
+            return;
+        }
 
         ToasterAnim = GetComponent<Animator>();
+        Toaster.GetComponent<EnemyAI>().enabled = false;
         Toaster.GetComponent<NavMeshAgent>().enabled = false;
 
     }
 
     void Update()
     {
+
+        if (ToasterAnim == null)
+        {
+            return;
+        }
+
         StartCoroutine(PlayToasterWalk());
     }
     IEnumerator PlayToasterWalk()
@@ -32,6 +42,7 @@ public class MovementToaster : MonoBehaviour
         ToasterAnim.applyRootMotion = true;
         ToasterAnim.SetBool("ToasterJump", true);
         Toaster.GetComponent<NavMeshAgent>().enabled = true;
+        Toaster.GetComponent<EnemyAI>().enabled = true;
     }
 
     private void OnTriggerEnter(Collider other)

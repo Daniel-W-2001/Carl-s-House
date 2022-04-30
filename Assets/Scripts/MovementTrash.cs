@@ -12,15 +12,24 @@ public class MovementTrash : MonoBehaviour
 
     void Start()
     {
-       
+       if (TrashAnim == null)
+        {
+            return;
+        }
 
         TrashAnim = GetComponent<Animator>();
+        Trash.GetComponent<EnemyAI>().enabled = false;
         Trash.GetComponent<NavMeshAgent>().enabled = false;
 
     }
 
     void Update()
     {
+        if (TrashAnim == null)
+        {
+            return;
+        }
+
         StartCoroutine(PlayTrashWalk());
     }
     IEnumerator PlayTrashWalk()
@@ -31,6 +40,7 @@ public class MovementTrash : MonoBehaviour
 
         TrashAnim.applyRootMotion = true;
         TrashAnim.SetBool("TrashJump", true);
+        Trash.GetComponent<EnemyAI>().enabled = true;
         Trash.GetComponent<NavMeshAgent>().enabled = true;
     }
 

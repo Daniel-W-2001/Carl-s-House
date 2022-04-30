@@ -13,14 +13,23 @@ public class MovementVase : MonoBehaviour
 
     void Start()
     {
-       
+       if (vaseAnim == null)
+        {
+            return;
+        }
         vaseAnim = GetComponent<Animator>();
+        Vase.GetComponent<EnemyAI>().enabled = false;
         Vase.GetComponent<NavMeshAgent>().enabled = false;
 
     }
 
     void Update()
     {
+        if (vaseAnim == null)
+        {
+            return;
+        }
+
         StartCoroutine(PlayWalk());
     }
     IEnumerator PlayWalk()
@@ -33,7 +42,8 @@ public class MovementVase : MonoBehaviour
         vaseAnim.applyRootMotion = true;
         vaseAnim.SetBool("VaseJump", true);
         Vase.GetComponent<NavMeshAgent>().enabled = true;
-        
+        Vase.GetComponent<EnemyAI>().enabled = true;
+
     }
 
     private void OnTriggerEnter(Collider other)
