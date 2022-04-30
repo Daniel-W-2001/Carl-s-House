@@ -1,23 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class BossHealthBar : MonoBehaviour
 {
-    public float speed = 1.0f;
-
-    public Color startColor;
-    public Color endColor;
-    float startTime;
-    
+    public GameObject House;
+    public GameObject Spawning;
+    public Animator HouseAnim;
 
     public int BossCurrentHealth;
     public int MaxHealth;
 
     void Start()
     {
-        startTime = Time.time;
-
         BossCurrentHealth = MaxHealth;
     }
     private void OnCollisionEnter(Collision collision)
@@ -30,12 +26,18 @@ public class BossHealthBar : MonoBehaviour
     }
     void Update()
     {
-        if (BossCurrentHealth > 8)
+        if (BossCurrentHealth <= 0)
         {
-            float t = (Time.time - startTime) * speed;
-            GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t);
-
+            HouseAnim.SetBool("HouseDies", true);
+            Destroy(Spawning);
+            StartCoroutine(DestroyHouse());
         }
+    }
+    IEnumerator DestroyHouse()
+    {
+        yield return new WaitForSeconds(4.0f);
+
+        Destroy(House);
     }
 }
 
