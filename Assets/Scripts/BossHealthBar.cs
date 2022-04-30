@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class BossHealthBar : MonoBehaviour
 {
+    public float speed = 1.0f;
+
+    public Color startColor;
+    public Color endColor;
+    float startTime;
+    
+
     public int BossCurrentHealth;
     public int MaxHealth;
-    public GameObject house;
+
     void Start()
     {
-        BossCurrentHealth = MaxHealth;   
+        startTime = Time.time;
+
+        BossCurrentHealth = MaxHealth;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,6 +26,15 @@ public class BossHealthBar : MonoBehaviour
         {
             Debug.Log("Ouch!");
             BossCurrentHealth -= 1;
+        }
+    }
+    void Update()
+    {
+        if (BossCurrentHealth > 8)
+        {
+            float t = (Time.time - startTime) * speed;
+            GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t);
+
         }
     }
 }
