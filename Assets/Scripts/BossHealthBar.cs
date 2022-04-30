@@ -35,7 +35,7 @@ public class BossHealthBar : MonoBehaviour
     }
     IEnumerator DestroyHouse()
     {
-        yield return new WaitForSeconds(4.0f);
+        yield return new WaitForSeconds(4.4f);
 
         Destroy(House);
     }
