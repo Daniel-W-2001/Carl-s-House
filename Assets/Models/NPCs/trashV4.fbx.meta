@@ -9,7 +9,27 @@ ModelImporter:
   - first:
       74: 7294114643343554450
     second: metarig|PlaneAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.030
+    second: {fileID: 2100000, guid: 8fd8f3247a816df40831c6ff1cf37741, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.031
+    second: {fileID: 2100000, guid: 87d4c88129f0ff34e8e0e22dd487d3fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.035
+    second: {fileID: 2100000, guid: 40b88c2d841efa546896d392ab57deaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.036
+    second: {fileID: 2100000, guid: 0d2571620e7e56c4e95bb91840bea9c1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
