@@ -5,18 +5,31 @@ using UnityEngine.Animations;
 
 public class BossHealthBar : MonoBehaviour
 {
+    public GameObject pooledObject;
+
+    public int pooledAmount;
+
+    List<GameObject> pooledObjects;
+
+    public Transform NPCPos;
+
     public GameObject House;
     public GameObject Spawning;
     public Animator HouseAnim;
-    public GameObject Particle_1, Particle_2, Particle_3;
     public int BossCurrentHealth;
     public int MaxHealth;
 
     void Start()
     {
-        Particle_1.SetActive(false);
-        Particle_2.SetActive(false);
-        Particle_3.SetActive(false);
+        pooledObjects = new List<GameObject>();
+        for (int i = 0; i < pooledAmount; i++)
+        {
+
+            GameObject obj = (GameObject)Instantiate(pooledObject);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+
         BossCurrentHealth = MaxHealth;
     }
     private void OnCollisionEnter(Collision collision)
@@ -34,19 +47,17 @@ public class BossHealthBar : MonoBehaviour
             HouseAnim.SetBool("HouseDies", true);
             Destroy(Spawning);
             StartCoroutine(DestroyHouse());
-            Particle_1.SetActive(true);
-            Particle_2.SetActive(true);
-            Particle_3.SetActive(true);
         }
     }
     IEnumerator DestroyHouse()
     {
         yield return new WaitForSeconds(4.4f);
-
+        Vector3 start = NPCPos.position;
         Destroy(House);
-        Destroy(Particle_1, 3.0f);
-        Destroy(Particle_2, 3.0f);
-        Destroy(Particle_3, 3.0f);
+        for (int i = 0; i < pooledObjects.Count; i++)
+        {
+            GameObject obj = (GameObject)Instantiate(pooledObject, start, transform.rotation);
+        }
     }
 }
 
