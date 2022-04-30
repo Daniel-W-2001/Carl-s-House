@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-   public void PlayGame () {
+
+   void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void PlayGame () {
         
         SceneManager.LoadScene("Carl's House");
     }

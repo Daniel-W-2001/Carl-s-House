@@ -10,7 +10,8 @@ public class Spawner : MonoBehaviour
     public GameObject[] EnemyArray;
     void Start()
     {
-        
+        spawnTime = 12f;
+        timeBetweenSpawn = 4f;
     }
     void FixedUpdate()
     {

@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 48e9068e7610893418f030b285b01239
+  - enabled: 1
     path: Assets/Scenes/Carl's House.unity
     guid: 9922c8c154484f946a698a854e7014dc
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 43bca8ade3c56db4888c4db6b1f7a695
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 42768ac0c40790b48bfe1dfef1bba3de
+  - enabled: 0
     path: Assets/Scenes/PlayfieldTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
