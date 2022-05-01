@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Animations;
 public class Spawner : MonoBehaviour
 {
     public Transform Spawnpoint;
     public float timeBetweenSpawn;
     public float spawnTime;
     public GameObject[] EnemyArray;
-    void Start()
+
+
+    void Awake()
     {
         spawnTime = 12f;
         timeBetweenSpawn = 4f;
@@ -31,10 +35,7 @@ public class Spawner : MonoBehaviour
 
         GameObject obj = (GameObject)Instantiate(EnemyArray[Enemyspawn], start, transform.rotation);
 
-    }
-    
-        
-
 
     }
+}
 

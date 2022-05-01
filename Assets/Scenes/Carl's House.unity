@@ -2349,6 +2349,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2205139516577436654, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
+      propertyPath: enableCrouch
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3558628222828147299, guid: 70a6a1645eb40e14c9c92ddf8219b017, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5687,6 +5691,11 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1d3853a57a585e042bff19446ecd7115, type: 3}
   m_PrefabInstance: {fileID: 1355715412}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1355715414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1782288235342026679, guid: 1d3853a57a585e042bff19446ecd7115, type: 3}
+  m_PrefabInstance: {fileID: 1355715412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1360888406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6149,9 +6158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f836fe58406016b468c20cb93b09b566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 0}
-  pooledAmount: 0
-  NPCPos: {fileID: 0}
+  pooledObject: {fileID: 7100214926616864748, guid: aef20d28bbc2b784799a72493353fa79, type: 3}
+  pooledAmount: 40
+  NPCPos: {fileID: 1355715414}
   House: {fileID: 634490461}
   Spawning: {fileID: 1898283067}
   HouseAnim: {fileID: 1355715413}
@@ -7488,6 +7497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898283068}
   - component: {fileID: 1898283069}
+  - component: {fileID: 1898283070}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -7523,11 +7533,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Spawnpoint: {fileID: 1898283068}
   timeBetweenSpawn: 4
-  spawnTime: 12
+  spawnTime: 0
   EnemyArray:
   - {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
   - {fileID: 4114548406188365765, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
   - {fileID: 3969745777630003391, guid: 8ca2b477b6fb55d45a97b285eae661b2, type: 3}
+--- !u!114 &1898283070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898283067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bcf3349b58ea6744beb018874503bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1898283069}
+  spawnobject: {fileID: 1898283067}
 --- !u!1 &1915693277
 GameObject:
   m_ObjectHideFlags: 0
