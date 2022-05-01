@@ -9,6 +9,9 @@ public class ToasterWaterCollision : MonoBehaviour
 
     public GameObject ElectricityWater;
 
+    public Rigidbody Toaster;
+    public Rigidbody Vase;
+
     public bool electrify;
 
     void Start()
@@ -32,8 +35,11 @@ public class ToasterWaterCollision : MonoBehaviour
         }
         if (electrify == true)
         {
+            Vase.constraints = RigidbodyConstraints.FreezePosition;
+            Toaster.constraints = RigidbodyConstraints.FreezePosition;
             ElectricityWater.SetActive(true);
             water.AddComponent<WaterDamage>();
+         
             electrify = false;
            
         }
