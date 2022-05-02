@@ -15375,7 +15375,7 @@ MonoBehaviour:
   Spawning: {fileID: 1898283067}
   HouseAnim: {fileID: 1355715413}
   BossCurrentHealth: 0
-  MaxHealth: 1
+  MaxHealth: 10
 --- !u!1 &1525497792
 GameObject:
   m_ObjectHideFlags: 0
