@@ -48,6 +48,8 @@ public class BossHealthBar : MonoBehaviour
             HouseAnim.SetBool("HouseDies", true);
             Destroy(Spawning);
             StartCoroutine(DestroyHouse());
+
+            StartCoroutine(HouseDies());
             
         }
     }
@@ -60,7 +62,11 @@ public class BossHealthBar : MonoBehaviour
         {
             GameObject obj = (GameObject)Instantiate(pooledObject, start, transform.rotation);
         }
-        yield return new WaitForSeconds(2f);
+    }
+    IEnumerator HouseDies()
+    {
+        yield return new WaitForSeconds(6f);
+
         SceneManager.LoadScene("WinScreen");
     }
 }

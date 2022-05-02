@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     void Awake()
     {
         spawnTime = 12f;
-        timeBetweenSpawn = 4f;
+        timeBetweenSpawn = 3f;
     }
     void FixedUpdate()
     {
