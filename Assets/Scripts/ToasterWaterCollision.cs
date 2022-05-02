@@ -15,10 +15,17 @@ public class ToasterWaterCollision : MonoBehaviour
 
     public bool electrify;
 
+    public Animator VaseElectrocuted;
+    
+
+
     void Start()
     {
         ElectricityWater.SetActive(false);
         HasCollided = false;
+ 
+        VaseElectrocuted = GetComponent<Animator>();
+        
     }
     void FixedUpdate()
     {
@@ -40,6 +47,11 @@ public class ToasterWaterCollision : MonoBehaviour
             electrify = false;
             Destroy(Vase.GetComponent<NavMeshAgent>());
             Destroy(other.gameObject.GetComponent<NavMeshAgent>());
+
+            other.GetComponent<Animator>().Play("ToasterElectrocuted");
+            VaseElectrocuted.Play("VaseElectrocuted");
+            
+
             Destroy(Vase, 2f);
             Destroy(other, 2f);
             system.Pause();
