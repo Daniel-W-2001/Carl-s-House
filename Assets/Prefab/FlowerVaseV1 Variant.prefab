@@ -172,6 +172,10 @@ PrefabInstance:
       propertyPath: ElectricityWater
       value: 
       objectReference: {fileID: 4066926378603622215}
+    - target: {fileID: -9179373446888245402, guid: 8a1c0881bbc049241b3475e0aea110b4, type: 3}
+      propertyPath: VaseElectrocuted
+      value: 
+      objectReference: {fileID: 286908574220179275}
     - target: {fileID: 4332135468102491057, guid: 8a1c0881bbc049241b3475e0aea110b4, type: 3}
       propertyPath: m_RootOrder
       value: 0

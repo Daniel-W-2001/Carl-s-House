@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.Animations;
 public class ToasterWaterCollision : MonoBehaviour
 {
     public ParticleSystem system;
+
     public GameObject water;
+
     public bool HasCollided;
 
     public GameObject ElectricityWater;
@@ -24,7 +26,7 @@ public class ToasterWaterCollision : MonoBehaviour
         ElectricityWater.SetActive(false);
         HasCollided = false;
  
-        VaseElectrocuted = GetComponent<Animator>();
+        //VaseElectrocuted = GetComponent<Animator>();
         
     }
     void FixedUpdate()
@@ -48,8 +50,11 @@ public class ToasterWaterCollision : MonoBehaviour
             Destroy(Vase.GetComponent<NavMeshAgent>());
             Destroy(other.gameObject.GetComponent<NavMeshAgent>());
 
+            Destroy(Vase.GetComponent<EnemyAI>());
+            Destroy(other.gameObject.GetComponent<EnemyAI>());
+
             other.GetComponent<Animator>().Play("ToasterElectrocuted");
-            VaseElectrocuted.Play("VaseElectrocuted");
+            Vase.GetComponent<Animator>().Play("VaseElectrocuted");
             
 
             Destroy(Vase, 2f);
