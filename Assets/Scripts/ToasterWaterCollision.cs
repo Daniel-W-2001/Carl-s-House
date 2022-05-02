@@ -35,12 +35,12 @@ public class ToasterWaterCollision : MonoBehaviour
         }
         if (electrify == true)
         {
-            Vase.constraints = RigidbodyConstraints.FreezePosition;
-            Toaster.constraints = RigidbodyConstraints.FreezePosition;
             ElectricityWater.SetActive(true);
             water.AddComponent<WaterDamage>();
+            Vase.constraints = RigidbodyConstraints.FreezePosition;
+            Toaster.constraints = RigidbodyConstraints.FreezePosition;            
          
-            electrify = false;
+           // electrify = false;
            
         }
     }
