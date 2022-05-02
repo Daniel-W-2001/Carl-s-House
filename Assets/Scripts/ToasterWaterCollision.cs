@@ -49,7 +49,7 @@ public class ToasterWaterCollision : MonoBehaviour
             electrify = false;
             Destroy(Vase.GetComponent<NavMeshAgent>());
             Destroy(other.gameObject.GetComponent<NavMeshAgent>());
-
+            //ElectricityWater.AddComponent<ElectricityDamage>();
             Destroy(Vase.GetComponent<EnemyAI>());
             Destroy(other.gameObject.GetComponent<EnemyAI>());
 

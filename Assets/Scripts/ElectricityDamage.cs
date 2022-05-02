@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterDamage : MonoBehaviour
+public class ElectricityDamage : MonoBehaviour
 {
     public int damageToGive = 1;
     public void OnParticleCollision(GameObject other)

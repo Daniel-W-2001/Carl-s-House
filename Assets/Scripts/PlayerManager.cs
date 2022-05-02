@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour
     public int playerCurrentHealth;
     public int numOfHearts;
 
+    public int toasthealamount;
+
     //UI and array for health
     public Image[] hearts;
 
@@ -72,7 +74,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Toast")
         {
-            playerCurrentHealth += 1;
+            playerCurrentHealth += toasthealamount;
             Destroy(collision.gameObject);
         }
 

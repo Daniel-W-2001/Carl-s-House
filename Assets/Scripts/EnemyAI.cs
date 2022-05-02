@@ -9,6 +9,10 @@ public class EnemyAI : MonoBehaviour
 
     public int damageToGive;
 
+    public int damageToGiveInAir;
+
+    public int damageToGiveOnGround;
+
     public NavMeshAgent Agent;
 
     public Transform player;
@@ -21,7 +25,7 @@ public class EnemyAI : MonoBehaviour
     //Attacking
     private void Awake()
     {
-
+        damageToGive = damageToGiveOnGround;
         player = GameObject.Find("FirstPersonController").transform;
         Agent = GetComponent<NavMeshAgent>();
     }
@@ -37,12 +41,12 @@ public class EnemyAI : MonoBehaviour
     {
         if (Enemy.IsAirborne == true)
         {
-            damageToGive = 2;
+            damageToGive = damageToGiveInAir;
         }
 
         else
         {
-            damageToGive = 1;
+            damageToGive = damageToGiveOnGround;
         }
     }
 
