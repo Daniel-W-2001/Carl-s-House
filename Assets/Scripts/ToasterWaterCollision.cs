@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 public class ToasterWaterCollision : MonoBehaviour
 {
+    public ParticleSystem system;
     public GameObject water;
     public bool HasCollided;
 
     public GameObject ElectricityWater;
 
-    public GameObject Toaster;
     public GameObject Vase;
 
     public bool electrify;
@@ -29,7 +29,7 @@ public class ToasterWaterCollision : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        if (other.gameObject.name == "Toaster Variant" && HasCollided == false)
+        if (other.gameObject.layer == LayerMask.NameToLayer("ToastyBoy") && HasCollided == false)
         {
             HasCollided = true;
             electrify = true;
@@ -37,10 +37,10 @@ public class ToasterWaterCollision : MonoBehaviour
         if (electrify == true)
         {
             ElectricityWater.SetActive(true);
-            water.AddComponent<WaterDamage>();
             electrify = false;
-            Destroy(Toaster.GetComponent<NavMeshAgent>());
             Destroy(Vase.GetComponent<NavMeshAgent>());
+            Destroy(other.gameObject.GetComponent<NavMeshAgent>());
+            system.Pause();
         }
     }
       

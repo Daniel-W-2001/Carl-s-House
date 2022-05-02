@@ -4833,6 +4833,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cb7ff37878b4b841b0d9a65efe60e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  system: {fileID: 4332135468102491056}
+  system2: {fileID: 4332135468102491056, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
   water: {fileID: 4332135468102491058}
   HasCollided: 0
+  ElectricityWater: {fileID: 4332135468102491058, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
+  Vase: {fileID: 6796127190508754827, guid: d390444a1358c05419750aa9c8c5f676, type: 3}
   electrify: 0
