@@ -363,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4332135468102491057, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.56
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 4332135468102491057, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -397,6 +397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electricity
       objectReference: {fileID: 0}
+    - target: {fileID: 4332135468102491059, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ef51df2b6045d742aa27b35d5b663de, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9907e4d4dea4f3c479d0c91d4b2a88b6, type: 3}
 --- !u!1 &6262161291204844858 stripped
