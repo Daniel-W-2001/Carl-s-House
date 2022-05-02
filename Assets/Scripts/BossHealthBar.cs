@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class BossHealthBar : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class BossHealthBar : MonoBehaviour
             HouseAnim.SetBool("HouseDies", true);
             Destroy(Spawning);
             StartCoroutine(DestroyHouse());
+            
         }
     }
     IEnumerator DestroyHouse()
@@ -58,6 +60,8 @@ public class BossHealthBar : MonoBehaviour
         {
             GameObject obj = (GameObject)Instantiate(pooledObject, start, transform.rotation);
         }
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("WinScreen");
     }
 }
 
