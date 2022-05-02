@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ToasterWaterCollision : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class ToasterWaterCollision : MonoBehaviour
 
     public GameObject ElectricityWater;
 
-    public Rigidbody Toaster;
-    public Rigidbody Vase;
+    public GameObject Toaster;
+    public GameObject Vase;
 
     public bool electrify;
 
@@ -28,7 +29,7 @@ public class ToasterWaterCollision : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        if(other.gameObject.name == "Toaster Variant" && HasCollided == false)
+        if (other.gameObject.name == "Toaster Variant" && HasCollided == false)
         {
             HasCollided = true;
             electrify = true;
@@ -37,11 +38,11 @@ public class ToasterWaterCollision : MonoBehaviour
         {
             ElectricityWater.SetActive(true);
             water.AddComponent<WaterDamage>();
-            Vase.constraints = RigidbodyConstraints.FreezePosition;
-            Toaster.constraints = RigidbodyConstraints.FreezePosition;            
-         
-           // electrify = false;
-           
+            electrify = false;
+            Destroy(Toaster.GetComponent<NavMeshAgent>());
+            Destroy(Vase.GetComponent<NavMeshAgent>());
         }
     }
+      
 }
+

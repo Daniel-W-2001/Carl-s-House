@@ -10,11 +10,11 @@ PrefabInstance:
     - target: {fileID: -9179373446888245402, guid: 8a1c0881bbc049241b3475e0aea110b4, type: 3}
       propertyPath: Vase
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6796127190508754827}
     - target: {fileID: -9179373446888245402, guid: 8a1c0881bbc049241b3475e0aea110b4, type: 3}
       propertyPath: Toaster
       value: 
-      objectReference: {fileID: 1257306288, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
+      objectReference: {fileID: 4114548406188365765, guid: fdf3b01ab57267d41a03b20ca4ac6cad, type: 3}
     - target: {fileID: -9179373446888245402, guid: 8a1c0881bbc049241b3475e0aea110b4, type: 3}
       propertyPath: ElectricityWater
       value: 
